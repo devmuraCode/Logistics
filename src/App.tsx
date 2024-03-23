@@ -1,12 +1,16 @@
 
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Services from "./components/services/Services";
+import Header from "./components/header/Header";
+import Reviews from "./components/reviews/Reviews";
+import Spheres from "./components/spheres/Spheres";
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Services/>
+      <Header />
+      <Reviews/>
+      <Spheres/>
       <Footer />
     </div>
   );
