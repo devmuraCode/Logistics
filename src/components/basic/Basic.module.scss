@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 3.125rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .img {
+    width: 6rem;
+    height: 6rem;
+    background: rgb(253 230 138);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+  }
+  img {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  .item {
+    text-align: center;
+    cursor: pointer;
+    :hover {
+      color: rgb(251 191 36);
+    }
+  }
+}
