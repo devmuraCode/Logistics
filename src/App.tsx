@@ -1,16 +1,17 @@
 
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import Basic from "./components/basic/Basic";
-import Delivery from "./components/delivery/Delivery";
+import Headers from "./components/headers/Headers";
+import Lawyers from "./components/lawyers/Lawyers";
+import Card from "./components/card/Card";
+
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Header />
-      <Basic/>
-      <Delivery/>
+     <Headers/>
+     <Lawyers/>
+     <Card/>
       <Footer />
     </div>
   );
