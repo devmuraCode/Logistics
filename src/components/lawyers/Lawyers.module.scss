@@ -1,0 +1,48 @@
+.card {
+    margin: 40px;
+    text-align: center;
+}
+
+.pTitle {
+    font-size: 20px;
+    
+}
+
+.back {
+    background-color: rgb(254, 242, 196);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    img {
+        width: 80px;
+        height: 50px;
+    }
+
+    h3 {
+        color: #fdd137;
+        font-size: 24px;
+        display: block;
+        font-weight: 900;
+    }
+
+    h4 {
+        font-weight: 700;
+        color: #3b3c44;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 3px;
+    }
+    p{
+        margin-top: 60px;
+    }
+}
+
+
+
+.cards {
+    display: flex;
+    align-items: center;
+}
