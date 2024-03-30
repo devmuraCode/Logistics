@@ -17,32 +17,32 @@ const Lawyers = () => {
             свой текст и настроить шриф
           </p>
         </div>
-          <div className={cls.back}>
-            <div className={cls.cards}>
-              <img src={img2} alt="" />
-              <div>
-                <h4>Срок действия </h4>
-                <h3>До 9 Дней </h3>
-              </div>
+        <div className={cls.back}>
+          <div className={cls.cards}>
+            <img src={img2} alt="" />
+            <div>
+              <h4>Срок действия </h4>
+              <h3>До 9 Дней </h3>
             </div>
-            <div className={cls.cards}>
-              <img src={img2} alt="" />
-              <div>
-                <h4>Срок действия </h4>
-                <h3>До 9 Дней </h3>
-              </div>
+          </div>
+          <div className={cls.cards}>
+            <img src={img2} alt="" />
+            <div>
+              <h4>Срок действия </h4>
+              <h3>До 9 Дней </h3>
             </div>
-            <div className="w-1/3 h-52">
-              <p className={cls.pText}>
-                Цена карго грузоперевозки из Китая во многом будет зависеть от
-                объемов груза, удаленности конечного объекта и, в следствии,
-                выбранного способа доставки.
-              </p>
-            </div>
+          </div>
+          <div className={cls.pText}>
+            <p>
+              Цена карго грузоперевозки из Китая во многом будет зависеть от
+              объемов груза, удаленности конечного объекта и, в следствии,
+              выбранного способа доставки.
+            </p>
           </div>
         </div>
       </div>
-  );
+      </div>
+      );
 };
 
-export default Lawyers;
+      export default Lawyers;
