@@ -1,17 +1,16 @@
-
+import Section from "./components/section/Section";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Headers from "./components/headers/Headers";
-import Lawyers from "./components/lawyers/Lawyers";
-import Card from "./components/card/Card";
+import About from "./components/about/About";
+import AboutUs from "./components/aboutUs/AboutUs";
+import Advantage from "./components/advantage/Advantage";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-     <Headers/>
-     <Lawyers/>
-     <Card/>
+      <AboutUs/>
+      <Advantage/>
       <Footer />
     </div>
   );
