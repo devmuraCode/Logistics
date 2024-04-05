@@ -5,8 +5,8 @@ const Lawyers = () => {
     <div className={cls.wrapper}>
       <div className="max-w-6xl mx-auto">
         <div className={cls.card}>
-          <h1 className="font-bold text-gray-dark text-3xl">
-            Это отзыв. Кликните здесь, чтобы отредактировать и написать хороший{" "}
+          <h1 className="font-bold text-gray-dark text-3xl mb-7">
+            Это отзыв. Кликните здесь, чтобы отредактировать и написать {" "}
           </h1>
           <p className={cls.pTitle}>
             Это текст. Нажмите один раз и выберите «Редактировать текст» или

@@ -1,7 +1,29 @@
 import { useState } from "react";
 import cls from './Navbar.module.scss'
+import { DownOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Dropdown, Space, Typography } from 'antd';
+import Nav from "./Nav";
+import { Link } from "react-router-dom";
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const items: MenuProps['items'] = [
+    {
+      key: '1',
+      label: 'Item 1',
+    },
+    {
+      key: '2',
+      label: 'Item 2',
+    },
+    {
+      key: '3',
+      label: 'Item 3',
+    },
+  ];
+
+
 
   return (
     <nav className={cls.wrapper}>
@@ -53,11 +75,28 @@ function Navbar() {
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <ul className="flex space-x-14 ml-7">
-                <li>Главное</li>
-                <li> Услуги</li>
-                <li>Карго</li>
-                <li>Помощь</li>
-                <li>О компании</li>
+                <Link to="/">Главное</Link>
+                <Dropdown dropdownRender={() => <Nav />} trigger={["click"]}>
+                  <Space>Услуги</Space>
+
+                </Dropdown>
+
+                <Link to="/cargoPage">Карго</Link>
+                <Dropdown
+                  menu={{
+                    items,
+                    selectable: true,
+                    defaultSelectedKeys: ['3'],
+                  }}
+                >
+                  <Typography.Link>
+                    <Space>
+                      Помощь
+                      <DownOutlined />
+                    </Space>
+                  </Typography.Link>
+                </Dropdown>
+                <Link to="/about-us">О компании</Link>
               </ul>
             </div>
           </div>
@@ -80,9 +119,8 @@ function Navbar() {
               </button>
 
               <div
-                className={`absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${
-                  isMobileMenuOpen ? "block" : "hidden"
-                }`}
+                className={`absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${isMobileMenuOpen ? "block" : "hidden"
+                  }`}
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"

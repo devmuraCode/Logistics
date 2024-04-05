@@ -1,9 +1,12 @@
 import cls from "./Basic.module.scss";
-
-const Basic = () => {
+interface BasicProps {
+  title: string;
+}
+const Basic: React.FC<BasicProps> = ({ title }) => {
   return (
     <div className={cls.wrapper}>
       <div className="max-w-5xl mx-auto">
+        <h1 className="text-3xl font-bold text-center pt-12 pb-12">{title}</h1>
         <div className="grid lg:grid-cols-4 md:grid-cols-4 gap-28">
           <div className={cls.item}>
             <div className={cls.img}>
