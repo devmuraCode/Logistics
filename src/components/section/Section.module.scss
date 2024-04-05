@@ -1,0 +1,17 @@
+
+.Card{
+    display: flex;
+    justify-content: space-between;
+   h3{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 700;
+   }
+}
+.Cards{
+    width: 350px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}

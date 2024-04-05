@@ -1,20 +1,7 @@
+import React from 'react'
+import { router } from './router/router'
+import { RouterProvider } from 'react-router-dom'
 
-import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
-import Headers from "./components/headers/Headers";
-import Lawyers from "./components/lawyers/Lawyers";
-import Card from "./components/card/Card";
+const App: React.FC = () => <RouterProvider router={router} />
 
-const App = () => {
-  return (
-    <div>
-      <Navbar />
-     <Headers/>
-     <Lawyers/>
-     <Card/>
-      <Footer />
-    </div>
-  );
-};
-
-export default App;
+export default App
