@@ -3,9 +3,9 @@ import img2 from "../../assets/img2.png";
 const Lawyers = () => {
   return (
     <div className={cls.wrapper}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-2">
         <div className={cls.card}>
-          <h1 className="font-bold text-gray-dark text-3xl mb-7">
+          <h1 className="font-bold text-3xl mb-7">
             Это отзыв. Кликните здесь, чтобы отредактировать и написать {" "}
           </h1>
           <p className={cls.pTitle}>

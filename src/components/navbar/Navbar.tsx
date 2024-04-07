@@ -1,191 +1,88 @@
+import SubNav from "./SubNav";
 import { useState } from "react";
-import cls from './Navbar.module.scss'
-import { DownOutlined } from '@ant-design/icons';
-import type { MenuProps } from 'antd';
-import { Dropdown, Space, Typography } from 'antd';
-import Nav from "./Nav";
+import cls from "./Navbar.module.scss";
 import { Link } from "react-router-dom";
+import Dropdown from "../dropdown/Dropdown";
+import { DownOutlined } from "@ant-design/icons";
+
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const items: MenuProps['items'] = [
-    {
-      key: '1',
-      label: 'Item 1',
-    },
-    {
-      key: '2',
-      label: 'Item 2',
-    },
-    {
-      key: '3',
-      label: 'Item 3',
-    },
-  ];
-
-
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <nav className={cls.wrapper}>
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button
-              type="button"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded={isMobileMenuOpen ? "true" : "false"}
-            >
-              <span className="absolute -inset-0.5"></span>
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className={`block h-6 w-6 ${isMobileMenuOpen ? "hidden" : "block"}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+      <div className="max-w-6xl mx-auto px-2">
+        <div className="py-6">
+          <div className="flex items-center justify-between sm:items-stretch">
+            <h1>LOGISTICS</h1>
+            <div className="sm:hidden">
+              <button
+                onClick={toggleMobileMenu}
+                className="block text-gray-500 hover:text-white focus:text-white focus:outline-none"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-              <svg
-                className={`hidden h-6 w-6 ${isMobileMenuOpen ? "block" : "hidden"}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-              <img
-                className="h-8 w-auto"
-                src="https://w7.pngwing.com/pngs/1015/633/png-transparent-logistics-transport-haulage-warehouse-business-logistic-miscellaneous-angle-freight-transport.png"
-                alt="Your Company"
-              />
-            </div>
-            <div className="hidden sm:ml-6 sm:block">
-              <ul className="flex space-x-14 ml-7">
-                <Link to="/">Главное</Link>
-                <Dropdown dropdownRender={() => <Nav />} trigger={["click"]}>
-                  <Space>Услуги</Space>
-
-                </Dropdown>
-
-                <Link to="/cargoPage">Карго</Link>
-                <Dropdown
-                  menu={{
-                    items,
-                    selectable: true,
-                    defaultSelectedKeys: ['3'],
-                  }}
+                <svg
+                  className="h-6 w-6 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <Typography.Link>
-                    <Space>
-                      Помощь
-                      <DownOutlined />
-                    </Space>
-                  </Typography.Link>
-                </Dropdown>
-                <Link to="/about-us">О компании</Link>
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 4H4v2h16v-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              className={`${
+                isMobileMenuOpen ? "block" : "hidden"
+              } sm:flex sm:ml-6`}
+            >
+              <ul className="flex flex-col items-center sm:flex-row gap-10 ml-7">
+                <li>
+                  <Link
+                    to="/"
+                    className="block px-4 py-2 bg-blue-500 text-black font-bold cursor-pointer"
+                  >
+                    Главное
+                  </Link>
+                </li>
+                <li>
+                  <Dropdown dropdownRender={() => <SubNav />} trigger={["hover"]}>
+                    <p className="text-black">
+                      Услуги <DownOutlined />
+                    </p>
+                  </Dropdown>
+                </li>
+                <li>
+                  <Link
+                    to="/cargoPage"
+                    className="block px-4 py-2 bg-blue-500 text-black font-bold cursor-pointer"
+                  >
+                    Карго
+                  </Link>
+                </li>
+                <li>
+                  <Dropdown dropdownRender={() => <SubNav />} trigger={["hover"]}>
+                    <p className="text-black">
+                      Помощь <DownOutlined />
+                    </p>
+                  </Dropdown>
+                </li>
+                <li>
+                  <Link
+                    to="/about-us"
+                    className="block px-4 py-2 bg-blue-500 text-black font-bold cursor-pointer"
+                  >
+                    О компании
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div className="relative ml-3">
-              <button
-                type="button"
-                className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                id="user-menu-button"
-                aria-expanded="false"
-                aria-haspopup="true"
-              >
-                <span className="absolute -inset-1.5"></span>
-                <span className="sr-only">Open user menu</span>
-                <img
-                  className="h-8 w-8 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                />
-              </button>
-
-              <div
-                className={`absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${isMobileMenuOpen ? "block" : "hidden"
-                  }`}
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="user-menu-button"
-                tabIndex={-1}
-              >
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabIndex={-1}
-                >
-                  Your Profile
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabIndex={-1}
-                >
-                  Settings
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabIndex={-1}
-                >
-                  Sign out
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className={`${isMobileMenuOpen ? "block" : "hidden"}`}
-        id="mobile-menu"
-      >
-        <div className="space-y-1 px-2 pb-3 pt-2">
-          <a
-            href="#"
-            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-            aria-current="page"
-          >
-            Dashboard
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >
-            Team
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >
-            Projects
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >
-            Calendar
-          </a>
         </div>
       </div>
     </nav>

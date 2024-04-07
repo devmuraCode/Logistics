@@ -1,8 +1,7 @@
-import Headers from '@/components/headers/Headers'
-import React from 'react'
-import Lawyers from './../../components/lawyers/Lawyers';
-import Basic from '@/components/basic/Basic';
 import Card from '@/components/card/Card';
+import Basic from '@/components/basic/Basic';
+import Headers from '@/components/headers/Headers'
+import Lawyers from './../../components/lawyers/Lawyers';
 
 const CargoPage = () => {
   return (

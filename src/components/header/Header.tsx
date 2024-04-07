@@ -1,10 +1,9 @@
-import Container from "../container/Container";
 import cls from "./Header.module.scss";
 const Header = () => {
   return (
     <div className={cls.wrapper}>
-      <Container>
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-20 items-center">
+      <div className="max-w-6xl mx-auto px-2">
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-rows-1 gap-20 items-center">
           <div className={cls.title}>
             <h1 className="font-bold text-gray-dark text-3xl">
               Мы находимся в Китае! <br />{" "}
@@ -19,7 +18,7 @@ const Header = () => {
             <img src="https://media.licdn.com/dms/image/D4D12AQGZCNv789WhwA/article-cover_image-shrink_720_1280/0/1698037839644?e=2147483647&v=beta&t=ZfPRQ6mSJ1gSSMi9ZwMTvNg5bMNJloqnKCYqekRxfLk" alt="" />
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };
