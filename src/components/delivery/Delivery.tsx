@@ -4,7 +4,7 @@ const Delivery = () => {
   return (
     <div className={cls.wrapper}>
       <div className="max-w-6xl mx-auto py-10">
-        <h1 className="font-bold text-gray-dark text-3xl text-center">
+        <h1 className="font-bold text-3xl text-center">
           доставка грузов из китая
         </h1>
         <div>

@@ -1,7 +1,6 @@
 import AboutUs from '@/components/aboutUs/AboutUs'
 import Advantage from '@/components/advantage/Advantage'
 import Headers from '@/components/headers/Headers'
-import Section from '@/components/section/Section'
 
 import React from 'react'
 
