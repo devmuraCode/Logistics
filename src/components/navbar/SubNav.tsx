@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Dropdown from "../dropdown/Dropdown";
 import cls from "./Navbar.module.scss";
+import { SwapOutlined } from "@ant-design/icons";
 
 const SubNav = () => {
   const SubPath = () => {
@@ -8,7 +9,7 @@ const SubNav = () => {
       <div className={cls.supNav}>
         <ul className="text-lg cursor-pointer leading-10">
           <li><Link to="/transportation">Доставка сборных грузов</Link></li>
-          <li>Контейнерные Перевозки</li>
+          <li><Link to="/container">Контейнерные Перевозки</Link></li>
         </ul>
       </div>
     );
@@ -28,7 +29,6 @@ const SubNav = () => {
   return (
     <div className={cls.subNav}>
       <ul className="text-lg cursor-pointer leading-10">
-        <li>Перевозка грузов</li>
         <li>
           <Dropdown
             overlay={ <SubPath/> }
@@ -36,7 +36,7 @@ const SubNav = () => {
             placement="right"
             trigger={["click"]}
           >
-           Перевозка грузов
+           <SwapOutlined /> {" "} Перевозка грузов
           </Dropdown>
         </li>
         <li> Выкуп товаров с китайской сайтов</li>
@@ -47,7 +47,7 @@ const SubNav = () => {
             placement="right"
             trigger={["click"]}
           >
-          Представитель В Китае
+         <SwapOutlined /> {" "} Представитель В Китае
           </Dropdown>
         </li>
         <li>Доставка товаров из Китая для маркетплейсов</li>

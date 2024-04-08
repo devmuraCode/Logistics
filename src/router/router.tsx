@@ -5,18 +5,21 @@ import MainLayout from "@/components/Layout/MainLayout"
 import { AboutPage } from "@/pages/AboutPage"
 import { CargoPage } from "@/pages/CargoPage"
 import TransportationPage from "@/pages/TransportationPage/TransportationPage"
+import СontainerDelivryPage from "@/pages/СontainerDelivryPage/СontainerDelivryPage"
 
 export enum AppRoutes {
     MAIN = 'main',
     ABOUT = '/about-us',
     CARGO = "/cargoPage",
-    TRANSPORTATION =  "/transportation"
+    TRANSPORTATION =  "/transportation",
+    CONTAINER = '/container',
 }
 export const RouterPath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: '/about-us',
     [AppRoutes.CARGO]: '/cargoPage',
-    [AppRoutes.TRANSPORTATION]: '/transportation'
+    [AppRoutes.TRANSPORTATION]: '/transportation',
+    [AppRoutes.CONTAINER]: '/container',
 }
 
 export const  router = createBrowserRouter([
@@ -39,6 +42,10 @@ export const  router = createBrowserRouter([
             {
                 path: RouterPath[AppRoutes.TRANSPORTATION],
                 element: <TransportationPage />,
+            },
+            {
+                path: RouterPath[AppRoutes.CONTAINER],
+                element: <СontainerDelivryPage />,
             },
         ],
     }
