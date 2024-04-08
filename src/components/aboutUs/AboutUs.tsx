@@ -12,7 +12,7 @@ const AboutUs = () => {
                         на странице. Расскажите посетителям сайта о себе.
                     </p>
                 </div>
-                    <img className="sm:hidden" src="https://www.active.co.th/img/contract-logistics.png" alt="" />
+                    <img className="lg:block hidden" src="https://www.active.co.th/img/contract-logistics.png" alt="" />
             </div>
            </div>
         </div>

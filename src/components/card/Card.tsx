@@ -4,7 +4,7 @@ const Card = () => {
   return (
     <div className="py-20">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl pb-10 font-semibold text-center">НАШИ ПРЕИМУЩЕСТВО</h1>
+        <h1 className="text-3xl pb-10 font-semibold text-center">Наши преимущество</h1>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
           <div className={cls.Card}>
             <div className={cls.item}>
