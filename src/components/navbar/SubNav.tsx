@@ -39,7 +39,7 @@ const SubNav = () => {
            Перевозка грузов
           </Dropdown>
         </li>
-        <li> Выкуп товаров с китайской сайтов</li>
+        <li><Link to="/productchina" > Выкуп товаров с китайской сайтов </Link></li>
         <li>
         <Dropdown
             overlay={ <SubPathTwo/> }
