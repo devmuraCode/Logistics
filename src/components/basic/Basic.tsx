@@ -1,14 +1,24 @@
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 import cls from "./Basic.module.scss";
 interface BasicProps {
   title: string;
 }
 const Basic: React.FC<BasicProps> = ({ title }) => {
+  useEffect(() => {
+    Aos.init({
+      duration: 500,
+      easing: 'ease-in-out',
+    })
+  }, []);
   return (
     <div className={cls.wrapper}>
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-3xl font-bold text-center pt-12 pb-12">{title}</h1>
+        <h1 data-aos="fade-up" className="text-3xl font-bold text-center pt-12 pb-12">{title}</h1>
         <div className="grid lg:grid-cols-4 md:grid-cols-4 gap-28">
-          <div className={cls.item}>
+          <div data-aos="fade-up" className={cls.item}>
             <div className={cls.img}>
               <img
                 className=""
@@ -19,7 +29,7 @@ const Basic: React.FC<BasicProps> = ({ title }) => {
             <h6 className="">Представитель в Китае</h6>
           </div>
 
-          <div className={cls.item}>
+          <div data-aos="fade-up" className={cls.item}>
             <div className={cls.img}>
               <img
                 className=""
@@ -29,7 +39,7 @@ const Basic: React.FC<BasicProps> = ({ title }) => {
             </div>
             <h6 className="">Перевозки для юридических лиц</h6>
           </div>
-          <div className={cls.item}>
+          <div data-aos="fade-up" className={cls.item}>
             <div className={cls.img}>
               <img
                 className=""
@@ -39,7 +49,7 @@ const Basic: React.FC<BasicProps> = ({ title }) => {
             </div>
             <h6 className="">Выкуп товаров в Китае</h6>
           </div>
-          <div className={cls.item}>
+          <div data-aos="fade-up" className={cls.item}>
             <div className={cls.img}>
               <img
                 className=""

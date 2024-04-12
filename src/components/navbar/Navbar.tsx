@@ -1,9 +1,10 @@
 import SubNav from "./SubNav";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import cls from "./Navbar.module.scss";
 import { Link } from "react-router-dom";
 import Dropdown from "../dropdown/Dropdown";
 import { DownOutlined } from "@ant-design/icons";
+import Help from "./Help";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,14 +12,33 @@ function Navbar() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  
+  const [backgroundColor, setBackgroundColor] = useState('#fff');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 100) {
+        setBackgroundColor('linear-gradient(90deg, rgba(246,243,237,1) 0%, rgba(232,231,224,1) 57%, rgba(195,195,192,1) 100%)');
+      } else {
+        setBackgroundColor('#fff');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className={cls.wrapper}>
+    <nav className={cls.wrapper} style={{ background: backgroundColor }}>
       <div className="max-w-6xl mx-auto px-2">
         <div className="py-6">
-          <div className="flex items-center justify-between sm:items-stretch">
+          <div className="lg:flex items-center justify-between sm:items-stretch">
             <h1>LOGISTICS</h1>
-            <div className="sm:hidden">
+            <div className="sm:hidden absolute top-7 right-3">
               <button
                 onClick={toggleMobileMenu}
                 className="block text-gray-500 hover:text-white focus:text-white focus:outline-none"
@@ -39,9 +59,9 @@ function Navbar() {
             <div
               className={`${
                 isMobileMenuOpen ? "block" : "hidden"
-              } sm:flex sm:ml-6`}
+              } sm:flex`}
             >
-              <ul className="flex flex-col items-center sm:flex-row gap-10 ml-7">
+              <ul className="flex flex-col items-center sm:flex-row lg:gap-10 gap-5  ml-7">
                 <li>
                   <Link
                     to="/"
@@ -66,7 +86,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Dropdown dropdownRender={() => <SubNav />} trigger={["hover"]}>
+                  <Dropdown dropdownRender={() => <Help />} trigger={["hover"]}>
                     <p className="text-black">
                       Помощь <DownOutlined />
                     </p>

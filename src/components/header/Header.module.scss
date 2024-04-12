@@ -5,7 +5,14 @@
   justify-content: center;
   align-items: center;
   .title{
-    line-height: 2rem;
+    h1{
+      line-height: 3rem;
+      font-size: 50px;
+      span{
+        font-size: 20px;
+      }
+    }
+    
   }
   button{
     background-color: rgb(253 230 138);
