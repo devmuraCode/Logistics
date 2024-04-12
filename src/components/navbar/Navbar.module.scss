@@ -1,11 +1,14 @@
 .wrapper {
   padding: 0.25rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .subNav {
   padding: 20px;
-  background: rgb(254, 242, 196);
+  background: linear-gradient(90deg, rgba(246,243,237,1) 0%, rgba(232,231,224,1) 57%, rgba(195,195,192,1) 100%);
 }
 .supNav {
   padding: 20px;
-  background: rgb(254, 242, 196);
+  background: linear-gradient(90deg, rgba(246,243,237,1) 0%, rgba(232,231,224,1) 57%, rgba(195,195,192,1) 100%);
 }

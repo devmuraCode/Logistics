@@ -1,17 +1,30 @@
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
+import { useEffect } from "react"
+
 import img5 from "../../assets/img5.svg";
 const Advantage = () => {
+
+  useEffect(() => {
+    Aos.init({
+      duration: 500,
+      easing: 'ease-in-out',
+    })
+  }, []);
+
   return (
     <div>
       <div className="max-w-6xl mx-auto px-2 pb-20">
-        <h1 className="text-3xl font-bold text-center pb-8">
-          НАШИ ПРЕИМУЩЕСТВО{" "}
+        <h1 data-aos="fade-up" className="text-3xl font-bold text-center pb-8">
+          Наши преимущество{" "}
         </h1>
         <div className="grid lg:grid-cols-2 gap-9">
           <div className="flex">
-            <img src={img5} alt="" />
+            <img data-aos="fade-up" src={img5} alt="" />
             <div>
-              <h1 className="font-bold ">Надежность </h1>
-              <p className="">
+              <h1 data-aos="fade-up" className="font-bold ">Надежность </h1>
+              <p data-aos="fade-up" className="">
                 Это текст. Нажмите один раз и выберите «Редактировать текст» или
                 просто кликните дважды, чтобы добавить свой текст и настроить
                 шрифт.{" "}
@@ -19,10 +32,10 @@ const Advantage = () => {
             </div>
           </div>
           <div className="flex">
-            <img src={img5} alt="" />
+            <img data-aos="fade-up" src={img5} alt="" />
             <div>
-              <h1 className="font-bold ">Надежность </h1>
-              <p className="">
+              <h1 data-aos="fade-up" className="font-bold ">Надежность </h1>
+              <p data-aos="fade-up" className="">
                 Это текст. Нажмите один раз и выберите «Редактировать текст» или
                 просто кликните дважды, чтобы добавить свой текст и настроить
                 шрифт.{" "}
@@ -30,10 +43,10 @@ const Advantage = () => {
             </div>
           </div>
           <div className="flex">
-            <img src={img5} alt="" />
+            <img data-aos="fade-up" src={img5} alt="" />
             <div>
-              <h1 className="font-bold ">Надежность </h1>
-              <p className="">
+              <h1 data-aos="fade-up" className="font-bold ">Надежность </h1>
+              <p data-aos="fade-up" className="">
                 Это текст. Нажмите один раз и выберите «Редактировать текст» или
                 просто кликните дважды, чтобы добавить свой текст и настроить
                 шрифт.{" "}
@@ -41,10 +54,10 @@ const Advantage = () => {
             </div>
           </div>
           <div className="flex ">
-            <img src={img5} alt="" />
+            <img data-aos="fade-up" src={img5} alt="" />
             <div>
-              <h1 className="font-bold ">Надежность </h1>
-              <p className="">
+              <h1 data-aos="fade-up" className="font-bold ">Надежность </h1>
+              <p data-aos="fade-up" className="">
                 Это текст. Нажмите один раз и выберите «Редактировать текст» или
                 просто кликните дважды, чтобы добавить свой текст и настроить
                 шрифт.{" "}
