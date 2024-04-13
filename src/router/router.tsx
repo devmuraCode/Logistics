@@ -11,6 +11,8 @@ import СontainerDelivryPage from "@/pages/СontainerDelivryPage/СontainerDeliv
 import ProductChina from "./../pages/ProductChina/ProductChina";
 import DocumentPage from "@/pages/DocumentPage/DocumentPage";
 import OemPage from "@/pages/OemPage/OemPage";
+import SuppliersPage from "@/pages/SuppliersPage/SuppliersPage";
+import ExaminationPage from "@/pages/ExaminationPage/ExaminationPage";
 
 export enum AppRoutes {
   MAIN = "main",
@@ -21,6 +23,8 @@ export enum AppRoutes {
   CONTAINER = "/container",
   OEM = "/oem",
   PRODUCTCHINA = "PRODUCTCHINA",
+  SUPPLIERS = "/suppliers",
+  EXAMINATION = "/examination",
 }
 export const RouterPath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
@@ -31,6 +35,8 @@ export const RouterPath: Record<AppRoutes, string> = {
   [AppRoutes.CONTAINER]: "/container",
   [AppRoutes.OEM]: "/oem",
   [AppRoutes.PRODUCTCHINA]: "/productchina",
+  [AppRoutes.SUPPLIERS]: "/suppliers",
+  [AppRoutes.EXAMINATION]: "/examination",
 };
 
 export const router = createBrowserRouter([
@@ -69,6 +75,14 @@ export const router = createBrowserRouter([
       {
         path: RouterPath[AppRoutes.OEM],
         element: <OemPage />,
+      },
+      {
+        path: RouterPath[AppRoutes.SUPPLIERS],
+        element: <SuppliersPage />,
+      },
+      {
+        path: RouterPath[AppRoutes.EXAMINATION],
+        element: <ExaminationPage />,
       },
     ],
   },
