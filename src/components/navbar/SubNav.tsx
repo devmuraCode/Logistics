@@ -18,9 +18,9 @@ const SubNav = () => {
     return (
       <div className={cls.supNav}>
         <ul className="text-lg cursor-pointer leading-10">
-          <li>поиск поставщиков в Китае</li>
+          <li><Link to="/suppliers">поиск поставщиков в Китае</Link></li>
           <li><Link to="/oem">производство в Китае под своим брендом ОЕМ и ОДМ</Link></li>
-          <li>проверка поставщиков в Китае  </li>
+          <li><Link to="/examination">проверка поставщиков в Китае </Link> </li>
         </ul>
       </div>
     );
