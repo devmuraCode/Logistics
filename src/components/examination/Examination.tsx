@@ -3,7 +3,7 @@ import cls from "./Examination.module.scss";
 const Examination: React.FC = () => {
   return (
     <div className={cls.wrapper}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-2">
         <h1 className="text-3xl font-bold py-6 text-center">Мы предлагаем такие услуги</h1>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-3">
           <div className="w-full border border-gray p-6">

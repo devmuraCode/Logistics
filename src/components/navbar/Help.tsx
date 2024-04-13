@@ -5,7 +5,7 @@ const Help = () => {
   return (
     <div className={cls.subNav}>
       <ul className="text-lg cursor-pointer leading-10">
-        <li><Link to="/contact">Контакты</Link></li>
+        <li><Link to="/contacts">Контакты</Link></li>
         <li>
           <Link to="/documents"> Документы </Link>
         </li>
