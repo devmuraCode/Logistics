@@ -15,6 +15,7 @@ import SuppliersPage from "@/pages/SuppliersPage/SuppliersPage";
 import ExaminationPage from "@/pages/ExaminationPage/ExaminationPage";
 import MarketplacePage from "@/pages/MarketplacePage/MarketplacePage";
 import ContactPage from "@/pages/ContactPage/ContactPage";
+import NewsPage from "@/pages/NewsPage/NewsPage";
 
 export enum AppRoutes {
   MAIN = "main",
@@ -29,6 +30,7 @@ export enum AppRoutes {
   EXAMINATION = "/examination",
   MARKETPLACE = "/marketplace",
   CONTACTS = "/contacts",
+  NEWS = "/news",
 }
 export const RouterPath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
@@ -43,7 +45,7 @@ export const RouterPath: Record<AppRoutes, string> = {
   [AppRoutes.EXAMINATION]: "/examination",
   [AppRoutes.MARKETPLACE]: "/marketplace",
   [AppRoutes.CONTACTS]: "/contacts",
-
+  [AppRoutes.NEWS]: "/news",
 };
 
 export const router = createBrowserRouter([
@@ -98,6 +100,10 @@ export const router = createBrowserRouter([
       {
         path: RouterPath[AppRoutes.CONTACTS],
         element: <ContactPage />,
+      },
+      {
+        path: RouterPath[AppRoutes.NEWS],
+        element: <NewsPage />,
       },
     ],
   },
