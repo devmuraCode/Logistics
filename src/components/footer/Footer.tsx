@@ -1,6 +1,10 @@
 import React from "react";
 import cls from "./Footer.module.scss";
-import { ContactsOutlined, MailOutlined, WhatsAppOutlined } from "@ant-design/icons";
+import { ContactsOutlined, FacebookOutlined, InstagramOutlined, MailOutlined, TwitterOutlined, WhatsAppOutlined } from "@ant-design/icons";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaSquareTwitter } from "react-icons/fa6";
 const Footer: React.FC = () => {
   return (
     <div className={cls.wrapper}>
@@ -55,7 +59,7 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <h2> 
+            <h2>
               <MailOutlined /> murad@gmail.com
             </h2>
             <h2><WhatsAppOutlined /> {""} Техподдержка
@@ -82,7 +86,14 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h2>Мы в соц сетях  </h2>
+            <h2 className="font-semibold pb-3 ">Мы в соц сетях  </h2>
+            <div className="flex gap-5">
+              <FaInstagram size={30} />
+              <FaTelegramPlane size={30} />
+              <FaFacebook size={30} />
+              <FaSquareTwitter size={30}  />
+            </div>
+
           </div>
         </div>
       </div>
