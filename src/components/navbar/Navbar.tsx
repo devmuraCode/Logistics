@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 import Dropdown from "../dropdown/Dropdown";
 import { DownOutlined } from "@ant-design/icons";
 import Help from "./Help";
-import Registor from "./Registor";
+import useRegisterModal from "@/containers/modals/hooks/useRegisterModal";
+import useLoginModal from "@/containers/modals/hooks/useLoginModal";
+import UserModal from "./UserModal";
 
 function Navbar() {
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -101,7 +104,7 @@ function Navbar() {
                     О компании
                   </Link>
                 </li>
-                <Dropdown dropdownRender={() => <Registor/>} trigger={["hover"]} >
+                <Dropdown dropdownRender={() => <UserModal/>} trigger={["hover"]} >
                 <p className="block px-4 py-2 bg-blue-500 text-black font-bold cursor-pointer">
                   Вход/Регистрация <DownOutlined />
                 </p>
