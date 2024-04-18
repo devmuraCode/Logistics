@@ -2,6 +2,8 @@ import Navbar from "../navbar/Navbar"
 import Footer from "../footer/Footer"
 import { FC, Suspense } from "react"
 import { Outlet } from "react-router-dom"
+import RegisterModal from "@/containers/modals/RegisterModa"
+import LoginModal from "@/containers/modals/LoginModal"
 
 const MainLayout: FC = () => {
     return (
@@ -13,6 +15,8 @@ const MainLayout: FC = () => {
                 </Suspense>
             </div>
             <Footer />
+            <RegisterModal/>
+            <LoginModal/>
         </div>
     )
 }
