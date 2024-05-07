@@ -3,6 +3,7 @@ import 'aos/dist/aos.css';
 import cls from "./Card.module.scss";
 import img2 from "../../assets/img2.png";
 import { useEffect } from "react";
+import { useAdvantages } from "./hook/useCard";
 const Card = () => {
 
   useEffect(() => {
@@ -12,77 +13,26 @@ const Card = () => {
     })
   }, []);
 
+  const { data: advantage } = useAdvantages();
+  console.log(advantage);
+
+
   return (
     <div className="py-20">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl pb-10 font-semibold text-center">Наши преимущество</h1>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
-          <div data-aos="fade-up" className={cls.Card}>
-            <div className={cls.item}>
-              <img src={img2} alt="" />
-              <h2>Лоялность к обьемам </h2>
-              <p>
-                Это текст. Нажмите один раз и выберите «Редактировать текст» или
-                просто кликните дважды, чтобы добавить свой текст и настроить
-                шрифт. 
-              </p>
+          {advantage?.map((advantage) => (
+            <div data-aos="fade-up" className={cls.Card}>
+              <div className={cls.item}>
+                <img src={advantage.img} alt="" />
+                <h2>{advantage.second_title}</h2>
+                <p>
+                {advantage.description}
+                </p>
+              </div>
             </div>
-          </div>
-          <div data-aos="fade-up" className={cls.Card}>
-            <div className={cls.item}>
-              <img src={img2} alt="" />
-              <h2>Лоялность к обьемам </h2>
-              <p>
-                Это текст. Нажмите один раз и выберите «Редактировать текст» или
-                просто кликните дважды, чтобы добавить свой текст и настроить
-                шрифт. 
-              </p>
-            </div>
-          </div>
-          <div data-aos="fade-up" className={cls.Card}>
-            <div className={cls.item}>
-              <img src={img2} alt="" />
-              <h2>Лоялность к обьемам </h2>
-              <p>
-                Это текст. Нажмите один раз и выберите «Редактировать текст» или
-                просто кликните дважды, чтобы добавить свой текст и настроить
-                шрифт.
-              </p>
-            </div>
-          </div>
-          <div data-aos="fade-up" className={cls.Card}>
-            <div className={cls.item}>
-              <img src={img2} alt="" />
-              <h2>Лоялность к обьемам </h2>
-              <p>
-                Это текст. Нажмите один раз и выберите «Редактировать текст» или
-                просто кликните дважды, чтобы добавить свой текст и настроить
-                шрифт. 
-              </p>
-            </div>
-          </div>
-          <div data-aos="fade-up" className={cls.Card}>
-            <div className={cls.item}>
-              <img src={img2} alt="" />
-              <h2>Лоялность к обьемам </h2>
-              <p>
-                Это текст. Нажмите один раз и выберите «Редактировать текст» или
-                просто кликните дважды, чтобы добавить свой текст и настроить
-                шрифт. 
-              </p>
-            </div>
-          </div>
-          <div data-aos="fade-up" className={cls.Card}>
-            <div className={cls.item}>
-              <img src={img2} alt="" />
-              <h2>Лоялность к обьемам </h2>
-              <p>
-                Это текст. Нажмите один раз и выберите «Редактировать текст» или
-                просто кликните дважды, чтобы добавить свой текст и настроить
-                шрифт. 
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
