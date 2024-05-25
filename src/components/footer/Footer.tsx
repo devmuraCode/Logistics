@@ -5,7 +5,16 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";
+import { useContact } from "./hook/useFooter";
+
+
 const Footer: React.FC = () => {
+
+
+  const { data: contact } = useContact();
+  console.log(contact);
+
+
   return (
     <div className={cls.wrapper}>
       <div className="max-w-6xl mx-auto px-2">
@@ -43,22 +52,23 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="leading-8 cursor-pointer">
-            <div className="pb-10">
-              <h2 className="font-semibold pb-3">
-                <ContactsOutlined /> Контакты
-              </h2>
-              <ul>
-                <li>
-                  Россия: <span>+7 (999) 999-99-99</span>
-                </li>
-                <li>
-                  Китай: <span>+7 (999) 999-99-99</span>
-                </li>
-                <li>
-                  Казахстан: <span>+7 (999) 999-99-99</span>
-                </li>
-              </ul>
-            </div>
+            {contact?.map((contact) => (
+              <div className="pb-10">
+                <h2 className="font-semibold pb-3">
+                  <ContactsOutlined /> Контакты
+                </h2>
+                <ul>
+                  <li>
+                    {contact.first_contact}
+                  </li>
+                  <li>
+                    {contact.second_contact}
+                  </li>
+                 
+                </ul>
+              </div>
+            ))}
+
             <h2>
               <MailOutlined /> murad@gmail.com
             </h2>
@@ -91,7 +101,7 @@ const Footer: React.FC = () => {
               <FaInstagram size={30} />
               <FaTelegramPlane size={30} />
               <FaFacebook size={30} />
-              <FaSquareTwitter size={30}  />
+              <FaSquareTwitter size={30} />
             </div>
 
           </div>
