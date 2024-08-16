@@ -1,0 +1,53 @@
+.back{
+    background-color: #3b3c44;;
+    padding: 35px;
+    margin-top: 40px;
+
+}
+.title{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+
+}
+.text{
+    color: white;
+    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400px;
+    font-size: 14px;
+
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+
+}
+.btn{
+    color: #fdd137;
+}
+.card{
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+    .back{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .cards{
+       flex-direction: column;
+       img{
+         width: 40px;
+         height: 40px;
+         margin-right: 20px;
+       }
+    }
+    .title{
+        width: 100%;
+        text-align: center;
+    }
+}

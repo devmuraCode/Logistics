@@ -8,8 +8,8 @@ const UserModal = () => {
   const loginModal = useLoginModal();
   return (
     <div className={cls.subNav}>
-      <div className="relative bg-white">
-        <div className="flex flex-row items-center gap-3">
+      <div className="relative text-white items-center">
+        <div className="flex flex-row items-center  gap-3">
           <div
             className={`
               md:block

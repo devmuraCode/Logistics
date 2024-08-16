@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import Dropdown from "../dropdown/Dropdown";
 import { DownOutlined } from "@ant-design/icons";
 import Help from "./Help";
-import useRegisterModal from "@/containers/modals/hooks/useRegisterModal";
-import useLoginModal from "@/containers/modals/hooks/useLoginModal";
+
 import UserModal from "./UserModal";
+
 
 function Navbar() {
 
@@ -17,15 +17,15 @@ function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
   
-  const [backgroundColor, setBackgroundColor] = useState('#fff');
+  const [backgroundColor, setBackgroundColor] = useState("#2e2f35");
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 100) {
-        setBackgroundColor('linear-gradient(90deg, rgba(246,243,237,1) 0%, rgba(232,231,224,1) 57%, rgba(195,195,192,1) 100%)');
+        setBackgroundColor('#2e2f35');
       } else {
-        setBackgroundColor('#fff');
+        setBackgroundColor('#2e2f35 ');
       }
     };
 
@@ -40,8 +40,7 @@ function Navbar() {
     <nav className={cls.wrapper} style={{ background: backgroundColor }}>
       <div className="max-w-6xl mx-auto px-2">
         <div className="py-6">
-          <div className="lg:flex items-center justify-between sm:items-stretch">
-            <h1>LOGISTICS</h1>
+          <div className="lg: flex items-center justify-around sm:items-stretch">
             <div className="sm:hidden absolute top-7 right-3">
               <button
                 onClick={toggleMobileMenu}
@@ -69,14 +68,14 @@ function Navbar() {
                 <li>
                   <Link
                     to="/"
-                    className="block px-4 py-2 bg-blue-500 text-black font-bold cursor-pointer"
+                    className="block px-4 py-2 bg-blue-500 text-white font-bold cursor-pointer"
                   >
                     Главное
                   </Link>
                 </li>
                 <li>
                   <Dropdown dropdownRender={() => <SubNav />} trigger={["hover"]}>
-                    <p className="text-black">
+                    <p className="text-white">
                       Услуги <DownOutlined />
                     </p>
                   </Dropdown>
@@ -84,14 +83,14 @@ function Navbar() {
                 <li>
                   <Link
                     to="/cargoPage"
-                    className="block px-4 py-2 bg-blue-500 text-black font-bold cursor-pointer"
+                    className="block px-4 py-2 bg-blue-500 text-white font-bold cursor-pointer"
                   >
                     Карго
                   </Link>
                 </li>
                 <li>
                   <Dropdown dropdownRender={() => <Help />} trigger={["hover"]}>
-                    <p className="text-black">
+                    <p className="text-white">
                       Помощь <DownOutlined />
                     </p>
                   </Dropdown>
@@ -99,13 +98,13 @@ function Navbar() {
                 <li>
                   <Link
                     to="/about-us"
-                    className="block px-4 py-2 bg-blue-500 text-black font-bold cursor-pointer"
+                    className="block px-4 py-2 bg-blue-500 text-white font-bold cursor-pointer"
                   >
                     О компании
                   </Link>
                 </li>
                 <Dropdown dropdownRender={() => <UserModal/>} trigger={["hover"]} >
-                <p className="block px-4 py-2 bg-blue-500 text-black font-bold cursor-pointer">
+                <p className="block px-4 py-2 bg-blue-500 text-white font-bold cursor-pointer">
                   Вход/Регистрация <DownOutlined />
                 </p>
                 </Dropdown>
@@ -116,6 +115,7 @@ function Navbar() {
       </div>
     </nav>
   );
+
 }
 
 export default Navbar;

@@ -1,6 +1,6 @@
 import Aos from "aos";
 import 'aos/dist/aos.css';
-
+import Commission from "@/components/Commission/Commission";
 import { useEffect } from "react"
 import img6 from "../../assets/img6.svg"
 import cls from "./ProductChina.module.scss"
@@ -54,6 +54,7 @@ const ProductChina = () => {
                         <h2>04</h2>
                     </div>
                 </div>
+                <Commission/>
                 <Card/>
                 <Message/>
             </div>

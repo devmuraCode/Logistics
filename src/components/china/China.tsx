@@ -1,4 +1,4 @@
-import cls from "./China.module.scss";
+
 import useRegistor from "./hooks/useRegistor";
 const China = () => {
   const registor = useRegistor(); // Renamed useRegistor to registor

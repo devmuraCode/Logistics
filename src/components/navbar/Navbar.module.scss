@@ -1,14 +1,32 @@
 .wrapper {
-  padding: 0.25rem 0;
-  position: sticky;
   top: 0;
   z-index: 1;
+  position: sticky;
 }
+
 .subNav {
   padding: 20px;
-  background: linear-gradient(90deg, rgba(246,243,237,1) 0%, rgba(232,231,224,1) 57%, rgba(195,195,192,1) 100%);
+  background-color: #2e2f35;
+  display: flex;
+  gap: 40px;
+
 }
+
 .supNav {
   padding: 10px;
-  background: linear-gradient(90deg, rgba(246,243,237,1) 0%, rgba(232,231,224,1) 57%, rgba(195,195,192,1) 100%);
+  background-color: #2e2f35
+  ;
+}
+
+.Card{
+  background-color: #2e2f35;
+  top: 0;
+  z-index: 1;
+  position: sticky;
+}
+
+@media screen and (max-width: 768px) {
+  .Card{
+    display: none;
+  }
 }

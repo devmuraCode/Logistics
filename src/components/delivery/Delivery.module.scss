@@ -5,3 +5,15 @@
   width: 100%;
   background-attachment: fixed, scroll;
 }
+.title{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 500px) {
+  .title{
+    font-size: 30px;
+    width: 100%; 
+}
+}
