@@ -6,7 +6,7 @@ import { useDirection } from "./hook/useBasic";
 interface BasicProps {
   title: string;
 }
-const Basic: React.FC<BasicProps> = ({ title }) => {
+const Basic: React.FC<BasicProps> = () => {
   useEffect(() => {
     Aos.init({
       duration: 500,
@@ -21,14 +21,15 @@ const Basic: React.FC<BasicProps> = ({ title }) => {
   return (
     <div className={cls.wrapper}>
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-4 grid-rows-1 gap-8 md:grid-cols-4 gap-28">
+        <div className="md:grid grid-cols-4 grid-rows-1 gap-8 grid-cols-4 gap-28 ">
           {directions?.map((direction) => (
             <div data-aos="fade-up" className={cls.item}>
               <div className={cls.img}>
                 <img
                   className=""
                   src={direction.img}
-                  alt="" />
+                  alt="" 
+                  />
               </div>
               <h6 className="">{direction.description}</h6>
             </div>

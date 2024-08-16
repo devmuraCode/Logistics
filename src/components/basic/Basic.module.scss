@@ -16,12 +16,19 @@
   img {
     margin: 0 auto;
     max-width: 80%;
-  }
+  };
   .item {
     text-align: center;
     cursor: pointer;
     :hover {
       color: rgb(251 191 36);
+      transition: 0.3s;
     }
   }
 }
+// @media screen and (max-width: 768px) {
+//   .wrapper {
+//     flex-direction: column;
+//   }
+  
+// }

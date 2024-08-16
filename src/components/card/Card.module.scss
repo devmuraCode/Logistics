@@ -2,10 +2,11 @@
 .Card{
     // background-color: rgb(195, 195, 195);
     // background: linear-gradient(90deg, rgba(252,239,214,1) 0%, rgba(252,234,166,1) 57%, rgba(251,228,136,1) 100%);
-    background: linear-gradient(90deg, rgba(246,243,237,1) 0%, rgba(232,231,224,1) 57%, rgba(195,195,192,1) 100%);
+    background: #fff8e1;
     :hover{
-        background: linear-gradient(90deg, rgba(195,195,192,1) 100% rgba(232,231,224,1) 57%,  rgba(246,243,237,1) 0%,  );
+        background: #fff8e1; 
         transition: 0.9s;
+     
     }
     h2{
         font-size: 1rem;
@@ -25,5 +26,18 @@
     }
 }
 .item{
-    padding: 2.1875rem 2.1875rem;
+    padding: 1.5rem 1.5rem;
+    transition: all 0.3s;
+  
+}
+.item:hover{
+    transform: scale(1.15);
+}
+@media screen and (max-width: 768px) {
+    .media{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
 }
