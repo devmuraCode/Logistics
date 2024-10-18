@@ -1,11 +1,11 @@
 import cls from "./Navbar.module.scss";
-
+import logo from "../../assets/logo.jpg"
 const TopNavbar = () => {
     return (
         <div className={cls.wrapper}>
             <div className={cls.Card}>
                 <div className="flex justify-around p-3">
-                    <h1 className="text-white">Logistics</h1>
+                    <img className="w-12 h-12" src={logo} alt="" />
                     <div className="flex gap-12">
                         <div className="flex">
                             <img src="" alt="" />

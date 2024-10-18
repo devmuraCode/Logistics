@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const httpsClient = axios.create({
-  baseURL: "https://back.legacy-ex.com/",
+  baseURL: "http://127.0.0.1:8000/",
 });

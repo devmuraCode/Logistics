@@ -1,27 +1,44 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Carousel } from "antd";
 import cls from "./CarouselHead.module.scss";
 import { useBanners } from "./hook/useCarusel";
 
 const CarouseHead: React.FC = () => {
-
   const { data: banners } = useBanners();
-  console.log(banners);
-
+  const carouselRef = useRef<any>(null); // Ссылка на карусель
 
   return (
-    <div className="max-w-6xl mx-auto">
-      <Carousel autoplay speed={100} dots={true} effect="fade">
-        {banners?.map((banner) => (
+    <div className="max-w-6xl mx-auto relative">
+      {/* Кнопки переключения слайдов */}
+      <button
+        className={cls.prevBtn}
+        onClick={() => carouselRef.current?.prev()}
+      >
+        {"<"}
+      </button>
+      <button
+        className={cls.nextBtn}
+        onClick={() => carouselRef.current?.next()}
+      >
+        {">"}
+      </button>
 
-          <div className={cls.wrapper}>
+      <Carousel
+        ref={carouselRef}
+        autoplay
+        speed={1000}
+        dots={true}
+        effect="fade"
+      >
+        {banners?.map((banner, index) => (
+          <div key={index} className={cls.wrapper}>
             <div
               data-aos="fade-up"
-              className=" grid lg:grid-cols-2 md:grid-cols-2  grid-rows-1 gap-20 items-center"
+              className="grid lg:grid-cols-2 md:grid-cols-2 grid-rows-1 gap-20 items-center"
             >
               <div className={cls.title}>
                 <h1 className="font-bold text-gray-dark">
-                  {banner.main_title} <br />{" "}
+                  {banner.main_title} <br />
                   <span className="font-normal text-black">
                     {banner.second_title}
                   </span>
@@ -34,25 +51,17 @@ const CarouseHead: React.FC = () => {
                 </button>
               </div>
               <div>
-                <img
-                  src={banner.img}
-                  alt=""
-                />
+                <img src={banner.img} alt="" />
               </div>
             </div>
           </div>
-
         ))}
       </Carousel>
     </div>
-
   );
 };
 
 export default CarouseHead;
-
-
-
 
 
 
