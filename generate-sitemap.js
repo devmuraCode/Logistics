@@ -1,7 +1,7 @@
 import { SitemapStream, streamToPromise } from 'sitemap';
 import fs from 'fs';
 
-const BASE_URL = "https://back.legacy-ex.com/";
+const BASE_URL = "https://legacy-ex.com/";
 
 const routes = [
   "/",

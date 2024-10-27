@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin
 Allow: /
 
-Sitemap: https://back.legacy-ex.com/sitemap.xml
+Sitemap: https://legacy-ex.com/sitemap.xml
