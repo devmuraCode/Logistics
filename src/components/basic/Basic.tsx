@@ -21,7 +21,9 @@ const Basic: React.FC<BasicProps> = () => {
   return (
     <div className={cls.wrapper}>
       <div className="max-w-5xl mx-auto">
-        <div className="md:grid grid-cols-4 grid-rows-1 gap-8 grid-cols-4 gap-28 ">
+
+        <div className="grid sm:grid sm:grid-cols-1 grid-cols-4 grid-rows-1 gap-8 md:grid-cols-4 gap-28">
+
           {directions?.map((direction) => (
             <div data-aos="fade-up" className={cls.item}>
               <div className={cls.img}>
