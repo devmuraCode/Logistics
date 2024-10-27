@@ -17,7 +17,7 @@ const Delivery = () => {
 
   return (
     <div className={cls.wrapper}>
-      <h1 data-aos="fade-up" className="font-bold text-3xl text-white text-center">
+      <h1 data-aos="fade-up" className={cls.title}>
         Доставка грузов из китая
       </h1>
       <div className="max-w-6xl mx-auto py-10">
@@ -32,7 +32,7 @@ const Delivery = () => {
                     className="card-cargo-tracking__icon w-16 h-10"
                   />
                 </div>
-                <h6 className="mb-0">{china.main_title}</h6>
+                <h6 className="mb-4 mt-4">{china.main_title}</h6>
               </div>
               <div data-aos="fade-up" className="">
                 <p>

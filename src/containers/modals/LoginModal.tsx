@@ -9,6 +9,7 @@ import Heading from "@/containers/Heading";
 
 import Modal from "./Modal";
 import Input from "../Input";
+import { httpsClient } from "@/http";
 
 const LoginModal = () => {
   const loginModal = useLoginModal();
@@ -46,6 +47,7 @@ const LoginModal = () => {
       <Heading title="Welcome back" subtitle="Login to your account!" />
       <Input
         id="username"
+        // @ts-ignore
         name="username"
         label="Name"
         type="text"
@@ -57,6 +59,7 @@ const LoginModal = () => {
       <Input
         id="password"
         label="Password"
+        // @ts-ignore
         name="password"
         type="password"
         disabled={isLoading}

@@ -1,11 +1,11 @@
 import React from "react";
 import cls from "./Footer.module.scss";
-import { ContactsOutlined, FacebookOutlined, InstagramOutlined, MailOutlined, TwitterOutlined, WhatsAppOutlined } from "@ant-design/icons";
+import { ContactsOutlined,MailOutlined,  WechatOutlined, WhatsAppOutlined } from "@ant-design/icons";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaSquareTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 import { useContact } from "./hook/useFooter";
+import { SlSocialVkontakte } from "react-icons/sl";
 
 
 const Footer: React.FC = () => {
@@ -98,10 +98,12 @@ const Footer: React.FC = () => {
           <div>
             <h2 className="font-semibold pb-3 ">Мы в соц сетях  </h2>
             <div className="flex gap-5">
-              <FaInstagram size={30} />
-              <FaTelegramPlane size={30} />
-              <FaFacebook size={30} />
-              <FaSquareTwitter size={30} />
+              <FaInstagram style={{ fontSize: "30px" }}  size={30} />
+              <a href="https://t.me/Legacyexcom"><FaTelegramPlane style={{ fontSize: "30px" }}  size={30} /></a>
+              <WechatOutlined style={{ fontSize: "30px" }} size={30} />
+              <WhatsAppOutlined style={{ fontSize: "30px" }} size={30} />
+              <SlSocialVkontakte size={30}  />
+              <a href="https://youtube.com/@legacyex?si=5PreMDswLEy8EA7w"><FaYoutube style={{ fontSize: "30px" }}  size={30}  /></a>
             </div>
 
           </div>

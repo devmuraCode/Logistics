@@ -4,7 +4,7 @@ import cls from "./Navbar.module.scss";
 const Help = () => {
   return (
     <div className={cls.subNav}>
-      <ul className="text-lg cursor-pointer leading-10">
+      <ul className="text-lg text-white cursor-pointer leading-10">
         <li><Link to="/contacts">Контакты</Link></li>
         <li>
           <Link to="/documents"> Документы </Link>
