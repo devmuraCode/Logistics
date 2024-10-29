@@ -44,7 +44,7 @@ function Navbar() {
             <div className="sm:hidden absolute top-7 right-3">
               <button
                 onClick={toggleMobileMenu}
-                className="block text-gray-500 hover:text-white focus:text-white focus:outline-none"
+                className="block text-gray-500  hover:text-white  focus:text-white focus:outline-none"
               >
                 <svg
                   className="h-6 w-6 fill-current"

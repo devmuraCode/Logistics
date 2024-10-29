@@ -12,7 +12,7 @@ const Message = () => {
         </h1>
         <div className={cls.content}>
           <div>
-            <div className="flex justify-between p-10">
+            <div className={cls.inputCard}>
               <div>
                 <div>
                   <p>Ваше Имя </p>

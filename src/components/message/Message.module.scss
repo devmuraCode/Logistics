@@ -2,6 +2,12 @@
     background: rgb(128, 128, 128);
     padding: 90px 0;
     font-family: "Roboto", sans-serif;
+    margin-bottom: 50px;
+}
+.inputCard{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
 }
 .content{
     width: 100%;
@@ -16,3 +22,28 @@
         padding: 20px
     }
 }
+@media (max-width: 768px) {
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .content {
+      .inputCard {
+        flex-direction: column;
+      }
+
+      .p-10 {
+        padding: 1rem;
+      }
+
+      .input {
+        font-size: 0.9rem;
+        width: 100%;
+      }
+
+      .inputs {
+        font-size: 0.9rem;
+      }
+    }
+  }

@@ -2,7 +2,7 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 
 import { useEffect } from "react"
-
+import cls from "./Advantage.module.scss"
 import img5 from "../../assets/img5.svg";
 const Advantage = () => {
 
@@ -15,8 +15,9 @@ const Advantage = () => {
 
   return (
     <div>
+      
       <div className="max-w-6xl mx-auto px-2 pb-20">
-        <h1 data-aos="fade-up" className="text-3xl font-bold text-center pb-8">
+        <h1 data-aos="fade-up" className={cls.title}>
           Наши преимущество{" "}
         </h1>
         <div className="grid lg:grid-cols-2 gap-9">

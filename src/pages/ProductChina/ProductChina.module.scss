@@ -17,4 +17,37 @@
         font-weight: 700;
     }
 }
+.title{
+    text-align: center;
+    font-weight: 700;
+    font-size: xx-large;
+    margin-bottom: 30px
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .title{
+    width: 98%;
+  }
+    .card {
+      flex: 1 1 100%;
+      max-width: 90%;
+      margin-bottom: 1rem;
+      
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
