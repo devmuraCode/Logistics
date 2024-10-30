@@ -8,7 +8,7 @@ const DowlaydDocument = () => {
                 <h1 className={cls.title}>СКАЧАТЬ ДОКУМЕНТЫ ДЛЯ СОТРУДНИЧЕСТВО С НАМИ</h1>
                 <div className={cls.cards}>
                     <div className={cls.card}>
-                        <img src={img9} alt="" />
+                        <img src={img9} alt="Документ с изображением" />
                         <div>
                             <h3 className={cls.text}>Договор оферты на доставку из Китая - КАРГО</h3>
                             <a href="/path/to/your/file.pdf" download>
@@ -17,7 +17,7 @@ const DowlaydDocument = () => {
                         </div>
                     </div>
                     <div className={cls.card}>
-                        <img src={img9} alt="" />
+                        <img src={img9} alt="Документ с изображением" />
                         <div>
                             <h3 className={cls.text}>Договор оферты на доставку из Китая - КАРГО</h3>
                             <a href="/path/to/your/file2.pdf" download>

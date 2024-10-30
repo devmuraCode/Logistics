@@ -25,7 +25,7 @@ const AboutUs = () => {
                         на странице. Расскажите посетителям сайта о себе.
                     </p>
                 </div>
-                    <img data-aos="fade-up" className="lg:block hidden" src="https://www.active.co.th/img/contract-logistics.png" alt="" />
+                    <img data-aos="fade-up" className="lg:block hidden" src="https://www.active.co.th/img/contract-logistics.png" alt="Инновационные логистические решения" />
             </div>
            </div>
         </div>

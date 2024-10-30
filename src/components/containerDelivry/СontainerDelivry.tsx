@@ -35,7 +35,7 @@ const СontainerDelivry = () => {
           </button>
         </div>
         <div>
-          <img data-aos="fade-up" src="https://www.container-xchange.com/wp-content/uploads/2022/10/Realistic-image-of-a-container-being-lifted-from-a-truck-on-delivery-1.png" alt="" />
+          <img data-aos="fade-up" src="https://www.container-xchange.com/wp-content/uploads/2022/10/Realistic-image-of-a-container-being-lifted-from-a-truck-on-delivery-1.png" alt="Контейнерные перевозки по всему миру" />
         </div>
       </div>
     </div>

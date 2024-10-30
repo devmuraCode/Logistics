@@ -22,7 +22,7 @@ const Advantage = () => {
         </h1>
         <div className="grid lg:grid-cols-2 gap-9">
           <div className="flex">
-            <img data-aos="fade-up" src={img5} alt="" />
+            <img data-aos="fade-up" src={img5} alt="Надежная защита" />
             <div>
               <h1 data-aos="fade-up" className="font-bold ">Надежность </h1>
               <p data-aos="fade-up" className="">

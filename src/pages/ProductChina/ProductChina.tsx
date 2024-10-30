@@ -24,7 +24,7 @@ const ProductChina = () => {
                 <div className={cls.wrapper}>
                     <div data-aos="fade-up" className={cls.card}>
                         <div>
-                            <img src={img6} alt="" />
+                            <img src={img6} alt="Книжный каталог" />
                             <h1>Выкуп товаров </h1>
                         </div>
                         <h2>01</h2>
@@ -32,7 +32,7 @@ const ProductChina = () => {
 
                     <div data-aos="fade-up" className={cls.card}>
                         <div>
-                            <img src={img6} alt="" />
+                            <img src={img6} alt="Книжный каталог" />
                             <h1>Выкуп товаров </h1>
                         </div>
                         <h2>02</h2>
@@ -40,7 +40,7 @@ const ProductChina = () => {
 
                     <div data-aos="fade-up" className={cls.card}>
                         <div>
-                            <img src={img6} alt="" />
+                            <img src={img6} alt="Книжный каталог" />
                             <h1>Выкуп товаров </h1>
                         </div>
                         <h2>03</h2>
@@ -48,7 +48,7 @@ const ProductChina = () => {
 
                     <div data-aos="fade-up" className={cls.card}>
                         <div>
-                            <img src={img6} alt="" />
+                            <img src={img6} alt="Книжный каталог" />
                             <h1>Выкуп товаров </h1>
                         </div>
                         <h2>04</h2>

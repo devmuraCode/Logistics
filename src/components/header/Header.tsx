@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ title, subTitle, img }) => {
             </button>
           </div>
           <div>
-            <img src={img} alt="" />
+            <img src={img} alt={title} />
           </div>
         </div>
       </div>

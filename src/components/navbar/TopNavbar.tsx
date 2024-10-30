@@ -5,7 +5,7 @@ const TopNavbar = () => {
         <div className={cls.wrapper}>
             <div className={cls.Card}>
                 <div className="flex justify-around p-3">
-                    <img className="w-12 h-12" src={logo} alt="" />
+                    <img className="w-12 h-12" src={logo} alt="lagency" />
                     <div className="flex gap-12">
                         <div className="flex">
                             <img src="" alt="" />
