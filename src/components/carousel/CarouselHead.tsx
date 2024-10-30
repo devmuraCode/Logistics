@@ -51,7 +51,7 @@ const CarouseHead: React.FC = () => {
                 </button>
               </div>
               <div>
-                <img src={banner.img} alt="" />
+                <img src={banner.img} alt={banner.main_title} />
               </div>
             </div>
           </div>

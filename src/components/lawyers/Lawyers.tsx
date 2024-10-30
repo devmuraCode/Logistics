@@ -19,14 +19,14 @@ const Lawyers = () => {
         </div>
         <div className={cls.back}>
           <div className={cls.cards}>
-            <img src={img2} alt="" />
+            <img src={img2} alt="До 9 Дней" />
             <div>
               <h4>Срок действия </h4>
               <h3>До 9 Дней </h3>
             </div>
           </div>
           <div className={cls.cards}>
-            <img src={img2} alt="" />
+            <img src={img2} alt="До 9 Дней" />
             <div>
               <h4>Срок действия </h4>
               <h3>До 9 Дней </h3>

@@ -28,7 +28,7 @@ const Delivery = () => {
                   <img
                     loading="lazy"
                     src={china.img}
-                    alt=""
+                    alt={china.main_title}
                     className="card-cargo-tracking__icon w-16 h-10"
                   />
                 </div>

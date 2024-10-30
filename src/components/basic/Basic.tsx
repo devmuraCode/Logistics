@@ -30,7 +30,7 @@ const Basic: React.FC<BasicProps> = () => {
                 <img
                   className=""
                   src={direction.img}
-                  alt="" 
+                  alt={direction.main_title}
                   />
               </div>
               <h6 className="">{direction.description}</h6>

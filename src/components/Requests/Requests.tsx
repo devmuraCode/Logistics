@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { TextField, MenuItem, Button, InputAdornment, Dialog, DialogContent, DialogActions } from '@mui/material'; // MUI компоненты
-import img8 from '../../assets/img8.png';
+import img8 from '../../assets/8.png';
 import cls from './Requests.module.scss'; // Стили
 
 interface IFormInput {
@@ -35,7 +35,7 @@ const Requests: React.FC = () => {
   return (
     <div className='max-w-6xl mx-auto'>
       <div className={cls.request}>
-        <img className={cls.img} src={img8} alt="" />
+        <img className={cls.img} src={img8} alt="Надежная транспортировка грузов" />
         <h1 className='text-xl'>Мы готовы ответить на ваши вопросы</h1>
         {/* Кнопка для открытия модального окна */}
         <button className={cls.btn} onClick={handleClickOpen}>

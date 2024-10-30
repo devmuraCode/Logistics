@@ -15,7 +15,7 @@ const Documents: React.FC = () => {
           <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-2">
           <div className="w-full bg-white py-5 px-10">
               <div className="flex gap-10">
-                <img className="w-10" src="https://www.svgrepo.com/show/64173/pdf-file.svg" alt="" />
+                <img className="w-10" src="https://www.svgrepo.com/show/64173/pdf-file.svg" alt="Загрузить PDF" />
                 <div>
                   <p className="text-gray-dark font-bold"><Link to="/">Договор оферты на доставку из Китая - Карго</Link></p>
                   <p className="text-gray text-sm">338,4 kb</p>
@@ -24,7 +24,7 @@ const Documents: React.FC = () => {
             </div>
             <div className="w-full bg-white py-5 px-10">
               <div className="flex gap-10">
-              <img className="w-10" src="https://www.svgrepo.com/show/64173/pdf-file.svg" alt="" />
+              <img className="w-10" src="https://www.svgrepo.com/show/64173/pdf-file.svg" alt="Загрузить PDF" />
                 <div>
                   <p className="text-gray-dark font-bold"><Link to="/">Договор оферты на доставку из Китая - Карго</Link></p>
                   <p className="text-gray text-sm">338,4 kb</p>
@@ -33,7 +33,7 @@ const Documents: React.FC = () => {
             </div>
             <div className="w-full bg-white py-5 px-10">
               <div className="flex gap-10">
-              <img className="w-10" src="https://www.svgrepo.com/show/64173/pdf-file.svg" alt="" />
+              <img className="w-10" src="https://www.svgrepo.com/show/64173/pdf-file.svg" alt="Загрузить PDF" />
                 <div>
                   <p className="text-gray-dark font-bold"><Link to="/">Договор оферты на доставку из Китая - Карго</Link></p>
                   <p className="text-gray text-sm">338,4 kb</p>
@@ -42,7 +42,7 @@ const Documents: React.FC = () => {
             </div>
             <div className="w-full bg-white py-5 px-10">
               <div className="flex gap-10">
-              <img className="w-10" src="https://www.svgrepo.com/show/64173/pdf-file.svg" alt="" />
+              <img className="w-10" src="https://www.svgrepo.com/show/64173/pdf-file.svg" alt="Загрузить PDF" />
                 <div>
                   <p className="text-gray-dark font-bold"><Link to="/">Договор оферты на доставку из Китая - Карго</Link></p>
                   <p className="text-gray text-sm">338,4 kb</p>

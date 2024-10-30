@@ -28,7 +28,7 @@ const Card = () => {
           {advantage?.map((advantage) => (
             <div data-aos="fade-up" className={cls.Card}>
               <div className={cls.item}>
-                <img src={advantage.img} alt="" />
+                <img src={advantage.img} alt={advantage.main_title} />
                 <h2>{advantage.second_title}</h2>
                 <p>
                 {advantage.description}
